@@ -6,7 +6,7 @@ A static, browser-only CV screening workspace prepared for KPJ Hospitals. Paste 
 
 ## Use
 
-1. Paste a job description or select one of three sample roles.
+1. Click **Create a role** to enter any job title and JD, paste a job description directly, or select one of three sample roles. Custom roles appear under **Your roles · this tab** and can be switched without retyping. They exist only in this tab’s memory and disappear on refresh. Editing a selected custom role’s JD updates it for the current session.
 2. Open **Review & edit criteria**. Check extracted requirements, alternatives, essential flags, and weights. Editing the job description regenerates the criteria.
 3. Upload PDF, DOCX or TXT files, or paste candidate text. Up to 20 candidates, 10 MB per file, 50 pages per PDF. Scanned PDFs need text pasted separately; there is no OCR. Password-protected PDFs must be unlocked first.
 4. Compare candidates. Select a candidate to expand criterion evidence and inspect the extracted source text.
