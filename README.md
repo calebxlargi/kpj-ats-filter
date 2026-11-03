@@ -12,7 +12,7 @@ A static, browser-only CV screening workspace prepared for KPJ Hospitals. Paste 
 4. Compare candidates. Select a candidate to expand criterion evidence and inspect the extracted source text.
 5. Export the evidence to CSV if needed. Inputs changing after comparison mark the results as stale and disable export until compared again.
 
-**Try with sample CVs** loads a Staff Nurse job description and all three fictional CVs. Other sample roles are Medical Officer and Business Development Executive. The sample library includes PDF and TXT downloads. All candidate names, employers, education providers, contacts and credentials are fictional, and job descriptions are demonstration examples rather than official KPJ vacancies. Phone numbers are intentionally non-dialable and emails use example.com.
+**Try with sample CVs** loads a Staff Nurse job description and all 12 fictional CVs. Other sample roles are Medical Officer and Business Development Executive. Each role has four profiles: its original sample and three additional candidates with strong, partial and limited evidence. The sample library groups profiles by role and includes PDF and TXT downloads plus a ZIP of the nine additional CVs. All candidate names, employers, education providers, contacts and credentials are fictional, and job descriptions are demonstration examples rather than official KPJ vacancies. Phone numbers are intentionally non-dialable and emails use example.com.
 
 ## What matching means
 
@@ -63,14 +63,14 @@ No environment secrets, bindings, functions or database are needed. The `.node-v
 
 ## Sample files
 
-`public/samples/` includes the three CVs in PDF and TXT plus the three job descriptions in TXT. `src/samples.js` owns the content. If editing sample content, regenerate the TXT files and PDFs together. `scripts/generate-samples.py` regenerates the PDFs using Python's `reportlab` (an authoring dependency only, not required to build or run the app).
+`public/samples/` includes all 12 CVs in PDF and TXT plus the three job descriptions in TXT. `src/samples.js` owns the content. If editing sample content, regenerate the TXT files and PDFs together. `scripts/generate-samples.py` regenerates the PDFs using Python's `reportlab` (an authoring dependency only, not required to build or run the app).
 
 ## Structure
 
 - `src/main.js`: workspace interactions, rendering and CSV export
 - `src/matcher.js`: criterion extraction, evidence matching and score calculation
 - `src/files.js`: client-side PDF, DOCX and TXT parsing
-- `src/samples.js`: fictional CVs and demonstration job descriptions
+- `src/samples.js` and `src/additional-samples.js`: fictional CVs and demonstration job descriptions
 - `tests/matcher.test.js`: meaningful matching and export regression checks
 - `public/_headers`: static hosting response headers
 

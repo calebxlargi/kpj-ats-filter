@@ -1,13 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {contains, extractRequirements, evaluateRequirement, matchCandidate, csvEscape, makeCSV} from '../src/matcher.js';
-import {samples} from '../src/samples.js';
+import {samples, sampleRoles} from '../src/samples.js';
 const term = (label,terms=[label]) => ({id:'test',label,terms,kind:'term',weight:2,required:true});
 test('Sample roles favour corresponding job evidence without sorting candidates',()=>{
- for(const s of samples){
+ for(const s of sampleRoles){
   const criteria=extractRequirements(s.jd);
-  const matched=samples.map(c=>matchCandidate({name:c.name,text:c.cv},criteria));
-  const own=matched[samples.indexOf(s)];
+  const matched=sampleRoles.map(c=>matchCandidate({name:c.name,text:c.cv},criteria));
+  const own=matched[sampleRoles.indexOf(s)];
   assert.ok(own.score>=85, `${s.role}: ${own.score}`);
   for(const other of matched.filter(c=>c!==own)) assert.ok(own.score>other.score,`${s.role} expected own match above unrelated profile`);
  }

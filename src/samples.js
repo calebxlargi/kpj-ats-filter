@@ -1,3 +1,4 @@
+import {additionalSamples} from './additional-samples.js';
 export const samples = [
   {
     id: 'nurse', role: 'Staff Nurse', category: 'Nursing', name: 'Nur Aisyah Rahman', initials: 'NA', file: 'nur-aisyah-rahman-staff-nurse',
@@ -15,3 +16,7 @@ export const samples = [
     cv: `Farah Nadia Abdullah\nBusiness Development & Marketing Executive\nKuala Lumpur, Malaysia\nEmail: farah.nadia@example.com | Phone: +60 1X-XXX 0303 (fictional, non-dialable)\n\nPROFESSIONAL SUMMARY\nBusiness development executive with 4 years of relevant experience in healthcare marketing, corporate partnerships and campaign management. Focused on measurable growth and strong stakeholder relationships.\n\nPROFESSIONAL EXPERIENCE\nBusiness Development Executive — Aurora Wellness Group (fictional)\nJanuary 2024 – Present | Kuala Lumpur\n- Develop corporate partnerships for employee health screening and wellness programmes.\n- Manage stakeholder management activities across HR teams, clinics and corporate clients.\n- Conduct market research and prepare monthly sales reporting for management.\n- Maintain CRM records, sales pipeline updates and account follow-ups.\n- Coordinate healthcare marketing, digital marketing and campaign management for screening packages.\n- Support event management for corporate wellness days and community health talks.\n\nMarketing Executive — Sentosa Health Services (fictional)\nJanuary 2022 – December 2023 | Kuala Lumpur\n- Delivered digital marketing campaigns and reported lead generation results.\n- Worked with designers, clinical teams and sales colleagues on service launches.\n\nEDUCATION\nBachelor of Business Administration (Marketing) — Universiti Perniagaan Seri Murni (fictional), 2021\n\nSKILLS\nBusiness development; healthcare marketing; corporate partnerships; stakeholder management; market research; sales reporting; CRM; digital marketing; event management; campaign management.\n\nLANGUAGES\nBahasa Malaysia and English.\n\nFICTIONAL SAMPLE — All employers, education providers and contact details are invented for software testing. Not a real application.`
   }
 ];
+
+export const sampleRoles = samples.slice(0, 3);
+for (const sample of sampleRoles) { sample.roleId = sample.id; sample.scenario = 'Original sample'; }
+samples.push(...additionalSamples.map(sample => ({...sample, jd: sampleRoles.find(role => role.id === sample.roleId).jd})));
