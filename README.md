@@ -74,4 +74,4 @@ No environment secrets, bindings, functions or database are needed. The `.node-v
 - `tests/matcher.test.js`: meaningful matching and export regression checks
 - `public/_headers`: static hosting response headers
 
-Prepared as a recruitment prototype. Uses the user-supplied KPJ Healthcare logo and gold brand colour #978467. The supplied raster logo is used as provided.
+Prepared as a recruitment prototype. Uses the KPJ Healthcare identity and gold brand colour #978467. The complete vector logo from https://kpj.listedcompany.com/images/img/kpj-logo.svg replaces the cropped reference image; its paths are rendered in the requested gold.

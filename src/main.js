@@ -13,7 +13,7 @@ const MAX_CANDIDATES = 20;
 const app = $('#app');
 app.innerHTML = `
 <aside class="sidebar">
-  <a class="brand" href="#" aria-label="KPJ Talent Match home"><img class="brand-logo" src="/kpj-healthcare-logo.png" alt="KPJ Healthcare — A JCORP Company"/><span class="brand-product">Talent Match <span>RECRUITMENT WORKSPACE</span></span></a>
+  <a class="brand" href="#" aria-label="KPJ Talent Match home"><img class="brand-logo" src="/kpj-healthcare-logo.svg" alt="KPJ Healthcare — A JCORP Company"/><span class="brand-product">Talent Match <span>RECRUITMENT WORKSPACE</span></span></a>
   <div class="workspace-label">RECRUITMENT WORKSPACE</div>
   <nav aria-label="Workspace"><a class="nav-item active" href="#workspace">${icon('clipboard-list')} CV screening <span class="nav-dot"></span></a><button class="nav-item" id="samples-nav">${icon('users')} Sample CV library <span class="nav-number">3</span></button><button class="nav-item" id="how-nav">${icon('circle-help')} How it works</button></nav>
   <div class="sidebar-note"><span class="small-icon">${icon('shield-check')}</span><strong>Private by design.</strong><p>Your CVs stay in this browser.<br>No uploads. No database.</p><button class="text-link" id="privacy-nav">Learn about privacy ${icon('arrow-up-right')}</button></div>
