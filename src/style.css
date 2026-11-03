@@ -2,3 +2,40 @@
 
 /* Supplied KPJ Healthcare identity; warm gold #978467 is the primary brand accent. */
 .brand{flex-direction:column;align-items:flex-start;gap:0;margin:0 0 35px}.brand-logo{width:100%;max-width:202px;height:auto;object-fit:contain;display:block;margin-bottom:14px;flex-shrink:0}.brand-product{font-size:18px;color:#645740;font-weight:600;padding:5px 10px 0}.brand-product>span{display:block;font-size:7px;letter-spacing:1.3px;color:#a59a88;margin-top:7px;font-weight:500}.workspace-label{display:none}.step.active b{color:#7d6b50}.sample-avatars i{background:#efe7d8;color:#978467}.score-badge{color:#7d6b50}.button.primary{color:#fff;background:#978467}.button.primary:hover:not(:disabled){background:#7d6b50}.nav-item.active{color:#7d6b50;background:#f5f1ea}.text-link{color:#8c7654}.brand-product{line-height:1.5}@media(max-width:1000px){.brand-logo{height:auto}.brand-product{font-size:17px;padding-left:7px}}@media(max-width:680px){.sidebar{position:relative;padding-top:10px}.brand{margin:0 0 12px;flex-direction:row;align-items:center;gap:18px}.brand-logo{width:clamp(125px,42vw,165px);height:auto;object-fit:contain;margin-bottom:0}.brand-product{font-size:16px;padding:0;border-left:1px solid #e8dfd0;padding-left:18px}.brand-product>span{font-size:6px;max-width:100px;line-height:1.7;margin-top:4px}}
+
+/* Phone usability: keep the workflow inside narrow screens and controls easy to tap. */
+@media(max-width:680px){
+  .steps{display:grid;grid-template-columns:minmax(0,1fr) 6px minmax(0,1fr) 6px minmax(0,1fr);gap:7px;align-items:start}
+  .step{min-width:0;flex-direction:column;gap:8px}
+  .step>div{min-width:0;width:100%}
+  .step b{font-size:10px;max-width:none;overflow-wrap:anywhere}
+  .step small{font-size:9px;max-width:none}
+  .step-line{width:6px;min-width:0;margin-top:9px}
+  input,select,textarea,.criterion-edit input{font-size:16px}
+  select{height:48px}
+  #jd::placeholder{font-size:14px}
+  #jd,#cv-text{line-height:1.65}
+  .field-label{font-size:12px}
+  .field-label>span:not(.required){font-size:10px}
+  .nav-item{min-height:44px;font-size:10px}
+  .tab{min-height:44px;font-size:12px}
+  .button,.button.small,.result-actions .button{min-height:44px}
+  .icon-button,.remove-candidate{width:44px;height:44px}
+  .result-actions>.icon-button{width:44px;height:44px}
+  .candidate-row b{font-size:12px;line-height:1.6}
+  .candidate-row small{font-size:10px;line-height:1.6}
+  .ready-tag{display:none}
+  .dropzone strong{font-size:12px;text-align:center;padding-inline:8px}
+  .dropzone>small,.scan-note{font-size:10px}
+  .local-tag{font-size:10px}
+  .criteria-toolbar .text-link{min-height:44px;font-size:11px}
+  .criteria-toolbar>span{display:none}
+  .compact-label,.criterion-options{font-size:11px}
+  .criterion-options select{width:55px;height:36px;font-size:14px}
+  .criterion-options input[type=checkbox]{width:20px;height:20px}
+  .evidence-legend{font-size:9px;gap:12px;flex-wrap:wrap}
+  .criterion-title{font-size:12px}
+  .criterion-title small,.status-label{font-size:9px}
+  .evidence-body{font-size:11px}
+  .results-heading{flex-wrap:wrap}
+}
